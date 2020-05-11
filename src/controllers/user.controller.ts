@@ -1,13 +1,14 @@
 import { Request, Response } from 'express'
-// import { QueryResult } from 'pg'
 
-// import { pool } from '../database'
+// import { connect } from '../database'
+import { User } from '../interface/User'
 
 export const getUsers = async (req: Request, res: Response): Promise<Response> => {
     try {
-        // const response: QueryResult = await pool.query('SELECT * FROM users')
-        // console.log(response.rows)
-        // res.status(200).json(response.rows)
+        // const conn = await connect()
+        // const users = await conn.query('SELECT * FROM users')
+        // console.log(users)
+        // return res.status(200).json(users)
 
         return res.status(200).json({
             users: [
@@ -29,6 +30,8 @@ export const getUserById = async (req: Request, res: Response): Promise<Response
 
 export const createUser = async (req: Request, res: Response): Promise<Response> => {
     try {
+        const newUser: User = req.body // Interface
+
         return res.status(200).json({ id: 1 })
     } catch (e) {
         console.log(e)

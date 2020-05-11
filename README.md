@@ -47,7 +47,7 @@ touch index.ts
 
 7. Install main dependencies
 ```bash
-npm i express body-parser
+npm i express body-parser dotenv
 ```
 
 8. Install type definition files as development dependencies
@@ -58,4 +58,13 @@ npm i -D @types/node @types/express @types/body-parser
 9. Install development dependencies
 ```bash
 npm i -D nodemon concurrently typescript
+```
+
+10. Install MySQL2 package and it's type definition file
+```bash
+npm i mysql2
+```
+```bash
+// This is weird but there is no @ infront of types
+npm i -D types/mysql2
 ```

@@ -3,10 +3,13 @@ import { getUsers, getUserById } from '../controllers/user.controller'
 
 const r = Router()
 
-r.get('', getUsers)
-r.get('/:id', getUserById)
-// r.post('', )
-// r.delete('/:id', )
-// r.put('/:id', )
+r.route('/')
+    .get(getUsers)
+    // .post(createUser)
+
+r.route('/:id')
+    .get(getUserById)
+    // .put(updateUser)
+    // .delete(deleteUser)
 
 export default r
