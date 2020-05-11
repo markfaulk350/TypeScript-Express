@@ -1,5 +1,6 @@
 // 3rd Party Imports
 import express, { Application } from 'express'
+import morgan from 'morgan'
 import bodyParser from 'body-parser'
 
 // Personal Imports
@@ -13,6 +14,7 @@ const app: Application = express()
 app.set('port', 3000 || process.env.PORT)
 
 // 3rd Party Middleware
+app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
