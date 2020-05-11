@@ -1,7 +1,6 @@
 import { Request, Response } from 'express'
 
 // import { connect } from '../database'
-import { User } from '../interface/User'
 
 export const getUsers = async (req: Request, res: Response): Promise<Response> => {
     try {
@@ -30,7 +29,7 @@ export const getUserById = async (req: Request, res: Response): Promise<Response
 
 export const createUser = async (req: Request, res: Response): Promise<Response> => {
     try {
-        const newUser: User = req.body // Interface
+        // const newUser: User = req.body // Interface
 
         return res.status(200).json({ id: 1 })
     } catch (e) {
